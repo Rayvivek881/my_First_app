@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head1.ejs') %>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <% if(name.length == 0) { %> 
+      <a href="#home" id="navbar__logo">Welcome</a>
+      <% } else { %>
+      <a href="/profile/<%=id%>" id="navbar__logo"><%= name %> </a>
+      <% } %>  
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar">hell0</span>
+        <span class="bar">vivek</span>
+        <span class="bar">ray</span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <% if(name.length == 0) { %> 
+            <a href="" class="navbar__links" id="profile-page">profile</a>
+            <% } else { %>
+            <a href="/profile/<%=id%>" class="navbar__links" id="home-page">profile</a>
+            <% } %>
+        </li>
+        <li class="navbar__item">
+          <% if(name.length == 0) { %> 
+            <a href="" class="navbar__links" id="Chats-page">Chats</a>
+            <% } else { %>
+            <a href="/chats/<%=id%>" class="navbar__links">Chats</a>
+            <% } %> 
+        </li>
+        <li class="navbar__item">
+          <% if(name.length == 0) { %> 
+            <a href="" class="navbar__links" id="services-page">Massage</a>
+            <% } else { %>
+            <a href="/massage/<%=id%>" class="navbar__links">Massage</a>
+            <% } %> 
+        </li>
+        <li class="navbar__btn">
+          <a href="/Signup" class="button" id="signup">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero" id="home">
+    <div class="hero__container">
+      <h1 class="hero__heading">welcome in <span>my site</span></h1>
+      <p class="hero__description">good luck my son</p>
+      <% if(name.length == 0) { %> 
+       <button class="main__btn"><a href="/Login">Login</a></button>
+        <% } else { %>
+        <button class="main__btn"><a href="/">Log out</a></button>
+        <% } %>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="main" id="about">
+    <div class="main__container">
+      <div class="main__img--container">
+        <div class="main__img--card"><i class="fas fa-layer-group"></i></div>
+      </div>
+      <div class="main__content">
+        <h1>we have created for you</h1>
+        <h2>most Secured chating platform</h2>
+        <p>please do not click bellow button cuz it is useless</p>
+        <button class="main__btn"><a href="#">don't click</a></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div class="services" id="services">
+    <h1>Our team Members</h1>
+    <div class="services__wrapper">
+      <div class="services__card">
+        <h2>vivek kumar ray</h2>
+        <p>noob programer and grandfather</p>
+        <div class="services__btn"><button>Get Started</button></div>
+      </div>
+      <div class="services__card">
+        <h2>Ravi kushwaha</h2>
+        <p>my one and only son</p>
+        <div class="services__btn"><button>Get Started</button></div>
+      </div>
+      <div class="services__card">
+        <h2>Full Gradients</h2>
+        <p>100 Combinations</p>
+        <div class="services__btn"><button>Get Started</button></div>
+      </div>
+      <div class="services__card">
+        <h2>Infinite Choices</h2>
+        <p>most Secured chating platform</p>
+        <div class="services__btn"><button>Get Started</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="main" id="sign-up">
+    <div class="main__container">
+      <div class="main__content">
+        <h1>Join Our Team</h1>
+        <h2>Sign Up Today</h2>
+        <p>See what makes us different</p>
+        <button class="main__btn"><a href="/Signup">Sign Up</a></button>
+      </div>
+      <div class="main__img--container">
+        <div class="main__img--card" id="card-2">
+          <i class="fas fa-users"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer__container">
+    <div class="footer__links">
+      <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+          <h2>About Us</h2>
+          <a href="/sign__up">How it works</a> <a href="/">Testimonials</a>
+          <a href="/">Careers</a> <a href="/">Terms of Service</a>
+        </div>
+        <div class="footer__link--items">
+          <h2>Contact Us</h2>
+          <a href="/">Contact</a> <a href="/">Support</a>
+          <a href="/">Destinations</a>
+        </div>
+      </div>
+      <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+          <h2>Videos</h2>
+          <a href="/">Submit Video</a> <a href="/">Ambassadors</a>
+          <a href="/">Agency</a>
+        </div>
+        <div class="footer__link--items">
+          <h2>Social Media</h2>
+          <a href="/">Instagram</a> <a href="/">Facebook</a>
+          <a href="/">Youtube</a> <a href="/">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <section class="social__media">
+      <div class="social__media--wrap">
+        <div class="footer__logo">
+          <a href="/" id="footer__logo">COLOR</a>
+        </div>
+        <p class="website__rights">© COLOR 2020. All rights reserved</p>
+        <div class="social__icons">
+          <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="/" class="social__icon--link"><i class="fab fa-instagram"></i></a>
+          <a href="/" class="social__icon--link"><i class="fab fa-youtube"></i></a>
+          <a href="/" class="social__icon--link"><i class="fab fa-linkedin"></i></a>
+          <a href="/" class="social__icon--link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.navbar__menu');
+    const navLogo = document.querySelector('#navbar__logo');
+    const mobileMenu = () => {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+    };
+    menu.addEventListener('click', mobileMenu);
+    const highlightMenu = () => {
+      const elem = document.querySelector('.highlight');
+      const homeMenu = document.querySelector('#home-page');
+      const aboutMenu = document.querySelector('#about-page');
+      const servicesMenu = document.querySelector('#services-page');
+      let scrollPos = window.scrollY;
+      if (window.innerWidth > 960 && scrollPos < 600) {
+        homeMenu.classList.add('highlight');
+        aboutMenu.classList.remove('highlight');
+        return;
+      } else if (window.innerWidth > 960 && scrollPos < 1400) {
+        aboutMenu.classList.add('highlight');
+        homeMenu.classList.remove('highlight');
+        servicesMenu.classList.remove('highlight');
+        return;
+      } else if (window.innerWidth > 960 && scrollPos < 2345) {
+        servicesMenu.classList.add('highlight');
+        aboutMenu.classList.remove('highlight');
+        return;
+      }
+      if ((elem && window.innerWIdth < 960 && scrollPos < 600) || elem) {
+        elem.classList.remove('highlight');
+      }
+    };
+    window.addEventListener('scroll', highlightMenu);
+    window.addEventListener('click', highlightMenu);
+    const hideMobileMenu = () => {
+      const menuBars = document.querySelector('.is-active');
+      if (window.innerWidth <= 768 && menuBars) {
+        menu.classList.toggle('is-active');
+        menuLinks.classList.remove('active');
+      }
+    };
+    menuLinks.addEventListener('click', hideMobileMenu);
+    navLogo.addEventListener('click', hideMobileMenu);
+    document.getElementById('services-page').addEventListener('click', ()=>{
+      alert('please login first');
+    })
+    document.getElementById('Chats-page').addEventListener('click', ()=>{
+      alert('please login first');
+    })
+    document.getElementById('profile-page').addEventListener('click', ()=>{
+      alert('please login first');
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <form class="container" style="margin-top: 10px;" method="POST" action="/profile-update/<%= id %>">
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">username</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputEmail3" value="<%= username %>" disabled>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputEmail4" class="col-sm-2 col-form-label">name</label>
+        <div class="col-sm-10">
+          <input type="text" id="inputEmail4" class="form-control" name="name" value="<%= name %>">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputEmail5" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" id="inputEmail5" class="form-control" name="email" value="<%= email %>">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">New password</label>
+        <div class="col-sm-10">
+          <input type="password" id="inputPassword3" placeholder="enter if you want to change" class="form-control" name="p1">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword4" class="col-sm-2 col-form-label">Current password</label>
+        <div class="col-sm-10">
+          <input type="password" id="inputPassword4" class="form-control" name="passward">
+        </div>
+      </div>
+      <input type="text" class="form-control" name="username" value="<%= username %>" hidden/>
+      <button type="submit" class="btn btn-primary">update</button>
+      <% if(flag == 1){ %> 
+      <div class="alert alert-warning alert-dismissible fade show" style="margin-top: 10px;" role="alert">
+        <strong><%= name %> </strong> You have entered wrong passward plaese try again.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <% } %> 
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>

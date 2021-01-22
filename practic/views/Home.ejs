@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <div class="Home">
+      <% if(name.length == 0) { %> 
+        <h1 class="">Welcome to this site</h1>
+      <% } %>
+      <% if(name.length != 0) { %>
+        <h1 class="">logged in by <a href="/profile/<%=id%>"><%=name%></a></h1>
+      <% } %> 
+        <a href="/Login"><button type="button" style="width: 100px;" class="btn btn-primary">Login</button></a>
+        <a href="/Signup"><button type="button" style="margin-left: 20px; width: 100px;" 
+            class="btn btn-primary">Sign Up</button></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
